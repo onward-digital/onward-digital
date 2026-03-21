@@ -15,6 +15,7 @@ export default function Portfolio() {
       color: '#22d3ee',
       gradient: 'linear-gradient(135deg, #0e4a5c, #0c2d3a)',
       mockupText: 'M&A',
+      url: 'https://martinez-asociados.vercel.app/',
     },
     {
       name: t('project_2_name'),
@@ -24,6 +25,7 @@ export default function Portfolio() {
       color: '#818cf8',
       gradient: 'linear-gradient(135deg, #3730a3, #1e1b4b)',
       mockupText: 'ALMA',
+      url: 'https://alma-store-pink.vercel.app/',
     },
     {
       name: t('project_3_name'),
@@ -33,6 +35,7 @@ export default function Portfolio() {
       color: '#34d399',
       gradient: 'linear-gradient(135deg, #065f46, #022c22)',
       mockupText: 'NV',
+      url: 'https://nutrivida-iota.vercel.app/',
     },
   ];
 
@@ -234,7 +237,9 @@ export default function Portfolio() {
                 </div>
 
                 <a
-                  href="#"
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   style={{
                     display: 'inline-flex',
                     alignItems: 'center',
