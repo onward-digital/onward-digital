@@ -12,7 +12,7 @@ const translations = {
     nav_cta: "Let's Talk",
 
     // Hero
-    hero_tag: 'DIGITAL STUDIO — BUENOS AIRES',
+    hero_tag: 'WEB DEVELOPMENT STUDIO',
     hero_title_1: 'We build websites',
     hero_title_2: 'that sell.',
     hero_subtitle: "We don't just code beautiful sites — we craft digital experiences that turn visitors into paying customers. Design, copy, and strategy included.",
