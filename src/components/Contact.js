@@ -217,7 +217,7 @@ export default function Contact() {
             </h3>
 
             {[
-              { icon: <Mail size={20} />, label: t('contact_email_label'), value: 'hello@onward.digital' },
+              { icon: <Mail size={20} />, label: t('contact_email_label'), value: t('contact_email_value') },
               { icon: <Clock size={20} />, label: t('contact_response'), value: t('contact_response_value') },
               { icon: <MapPin size={20} />, label: t('contact_location'), value: t('contact_location_value') },
             ].map((item, i) => (

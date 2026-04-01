@@ -1,7 +1,7 @@
 'use client';
 
 import { useLanguage } from '@/context/LanguageContext';
-import { ExternalLink, TrendingUp } from 'lucide-react';
+import { ExternalLink, Code } from 'lucide-react';
 
 export default function Portfolio() {
   const { t } = useLanguage();
@@ -11,7 +11,7 @@ export default function Portfolio() {
       name: t('project_1_name'),
       type: t('project_1_type'),
       desc: t('project_1_desc'),
-      result: t('project_1_result'),
+      highlight: t('project_1_highlight'),
       color: '#22d3ee',
       gradient: 'linear-gradient(135deg, #0e4a5c, #0c2d3a)',
       mockupText: 'M&A',
@@ -21,7 +21,7 @@ export default function Portfolio() {
       name: t('project_2_name'),
       type: t('project_2_type'),
       desc: t('project_2_desc'),
-      result: t('project_2_result'),
+      highlight: t('project_2_highlight'),
       color: '#818cf8',
       gradient: 'linear-gradient(135deg, #3730a3, #1e1b4b)',
       mockupText: 'ALMA',
@@ -31,7 +31,7 @@ export default function Portfolio() {
       name: t('project_3_name'),
       type: t('project_3_type'),
       desc: t('project_3_desc'),
-      result: t('project_3_result'),
+      highlight: t('project_3_highlight'),
       color: '#34d399',
       gradient: 'linear-gradient(135deg, #065f46, #022c22)',
       mockupText: 'NV',
@@ -156,7 +156,7 @@ export default function Portfolio() {
                       fontSize: '0.6rem',
                       color: 'rgba(255,255,255,0.3)',
                     }}>
-                      {project.name.toLowerCase().replace(/[^a-z]/g, '')}.com
+                      {project.name.toLowerCase().replace(/[^a-z]/g, '')}.vercel.app
                     </div>
                   </div>
                   {/* Content placeholder */}
@@ -212,26 +212,26 @@ export default function Portfolio() {
                   {project.desc}
                 </p>
 
-                {/* Result */}
+                {/* Tech Highlight */}
                 <div
                   style={{
                     display: 'flex',
                     alignItems: 'center',
                     gap: '0.75rem',
                     padding: '1rem',
-                    background: 'rgba(34, 211, 238, 0.05)',
+                    background: `${project.color}08`,
                     borderRadius: '8px',
                     border: '1px solid var(--color-border)',
                     marginBottom: '1.5rem',
                   }}
                 >
-                  <TrendingUp size={18} style={{ color: project.color }} />
+                  <Code size={18} style={{ color: project.color }} />
                   <div>
                     <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: 'var(--color-text-secondary)', letterSpacing: '0.1em' }}>
-                      {t('project_result')}
+                      {t('project_highlight')}
                     </div>
-                    <div style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: '0.95rem', color: project.color }}>
-                      {project.result}
+                    <div style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: '0.9rem', color: project.color }}>
+                      {project.highlight}
                     </div>
                   </div>
                 </div>

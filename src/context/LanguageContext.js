@@ -18,12 +18,12 @@ const translations = {
     hero_subtitle: "We don't just code beautiful sites — we craft digital experiences that turn visitors into paying customers. Design, copy, and strategy included.",
     hero_cta: 'Start Your Project',
     hero_cta2: 'View Our Work',
-    hero_stat_1_num: '50+',
-    hero_stat_1_label: 'Projects Delivered',
-    hero_stat_2_num: '98%',
-    hero_stat_2_label: 'Client Satisfaction',
-    hero_stat_3_num: '3x',
-    hero_stat_3_label: 'Avg. Conversion Boost',
+    hero_stat_1_num: 'Next.js',
+    hero_stat_1_label: 'React & Modern Stack',
+    hero_stat_2_num: 'Design',
+    hero_stat_2_label: 'Copy & Strategy Included',
+    hero_stat_3_num: 'BA, ARG',
+    hero_stat_3_label: 'Based in Buenos Aires',
 
     // Services
     services_tag: 'WHAT WE DO',
@@ -67,38 +67,38 @@ const translations = {
 
     // Portfolio
     portfolio_tag: 'OUR WORK',
-    portfolio_title: 'Recent Projects',
-    portfolio_subtitle: 'A selection of our latest work. Each project combines strategy, design, and technology.',
+    portfolio_title: 'Concept Projects',
+    portfolio_subtitle: 'Fully functional demos we built to showcase our skills. Each one is a real site you can navigate — design, code, and strategy from scratch.',
 
-    project_1_name: 'Martínez & Associates',
+    project_1_name: 'Martínez & Asociados',
     project_1_type: 'LAW FIRM WEBSITE',
-    project_1_desc: 'Professional multi-page site for a law firm. Designed to build trust and convert consultations.',
+    project_1_desc: 'Professional multi-page site for a law firm. Bilingual (EN/ES), with service pages, team section, and contact form designed to build trust.',
     
     project_2_name: 'Alma Store',
     project_2_type: 'E-COMMERCE',
-    project_2_desc: 'Full online store for artisanal products with cart, checkout, and inventory management.',
+    project_2_desc: 'Full online store with product catalog, cart, checkout flow, and inventory management. Built with Next.js and bilingual support.',
     
     project_3_name: 'NutriVida',
     project_3_type: 'LANDING PAGE',
-    project_3_desc: 'High-converting landing page for a nutritionist with online booking integration.',
+    project_3_desc: 'High-converting landing page for a nutritionist. Clean design with booking CTA, testimonials section, and mobile-first approach.',
 
-    project_result: 'Result',
-    project_1_result: '+180% lead generation in first month',
-    project_2_result: '$12K revenue in first 30 days',
-    project_3_result: '+250% appointment bookings',
-    project_cta: 'View Case Study',
+    project_highlight: 'Built with',
+    project_1_highlight: 'Next.js · React · Bilingual · Multi-page',
+    project_2_highlight: 'Next.js · E-commerce · Cart & Checkout',
+    project_3_highlight: 'Next.js · Landing Page · Mobile-first',
+    project_cta: 'View Live Demo',
 
     // About
     about_tag: 'WHO WE ARE',
     about_title: 'More than developers.',
-    about_p1: "We're a digital studio that combines development, design, and marketing into one seamless service. When you work with us, you don't just get a website — you get a growth engine.",
+    about_p1: "We're a web development studio based in Buenos Aires. We combine development, design, and marketing strategy into one seamless service — so you get a website that actually works for your business.",
     about_p2: 'Every pixel, every word, every line of code is crafted with one goal in mind: helping your business grow.',
     about_f1_title: 'Strategy First',
     about_f1_desc: 'We start with your business goals, not a template.',
     about_f2_title: 'Full-Stack Delivery',
     about_f2_desc: 'Design, copy, development, and deployment — all included.',
-    about_f3_title: 'Results Driven',
-    about_f3_desc: 'We measure success by your growth, not just deliverables.',
+    about_f3_title: 'Modern Tech',
+    about_f3_desc: 'Built with Next.js, React, and the latest tools for speed and SEO.',
 
     // Contact
     contact_tag: 'START YOUR PROJECT',
@@ -116,10 +116,11 @@ const translations = {
     contact_send: 'Send Message',
     contact_info_title: 'Get in Touch',
     contact_email_label: 'Email',
+    contact_email_value: 'onward.digital.studio@gmail.com',
     contact_response: 'Response Time',
     contact_response_value: 'Within 24 hours',
     contact_location: 'Location',
-    contact_location_value: 'Remote — Worldwide',
+    contact_location_value: 'Buenos Aires, Argentina',
 
     // Footer
     footer_desc: 'Web development studio crafting websites that convert visitors into customers.',
@@ -142,12 +143,12 @@ const translations = {
     hero_subtitle: 'No solo programamos sitios hermosos — creamos experiencias digitales que convierten visitantes en clientes. Diseño, textos y estrategia incluidos.',
     hero_cta: 'Iniciá tu Proyecto',
     hero_cta2: 'Ver Nuestro Trabajo',
-    hero_stat_1_num: '50+',
-    hero_stat_1_label: 'Proyectos Entregados',
-    hero_stat_2_num: '98%',
-    hero_stat_2_label: 'Satisfacción del Cliente',
-    hero_stat_3_num: '3x',
-    hero_stat_3_label: 'Aumento Promedio en Conversión',
+    hero_stat_1_num: 'Next.js',
+    hero_stat_1_label: 'React y Stack Moderno',
+    hero_stat_2_num: 'Diseño',
+    hero_stat_2_label: 'Copy y Estrategia Incluidos',
+    hero_stat_3_num: 'BA, ARG',
+    hero_stat_3_label: 'Desde Buenos Aires',
 
     // Services
     services_tag: 'QUÉ HACEMOS',
@@ -191,38 +192,38 @@ const translations = {
 
     // Portfolio
     portfolio_tag: 'NUESTRO TRABAJO',
-    portfolio_title: 'Proyectos Recientes',
-    portfolio_subtitle: 'Una selección de nuestros últimos trabajos. Cada proyecto combina estrategia, diseño y tecnología.',
+    portfolio_title: 'Proyectos Demo',
+    portfolio_subtitle: 'Demos funcionales que creamos para mostrar nuestras habilidades. Cada uno es un sitio real que podés navegar — diseño, código y estrategia desde cero.',
 
     project_1_name: 'Martínez & Asociados',
     project_1_type: 'SITIO WEB ESTUDIO JURÍDICO',
-    project_1_desc: 'Sitio multi-página profesional para un estudio jurídico. Diseñado para generar confianza y convertir consultas.',
+    project_1_desc: 'Sitio multi-página profesional para un estudio jurídico. Bilingüe (EN/ES), con páginas de servicios, sección de equipo y formulario de contacto.',
     
     project_2_name: 'Alma Store',
     project_2_type: 'E-COMMERCE',
-    project_2_desc: 'Tienda online completa para productos artesanales con carrito, checkout y gestión de inventario.',
+    project_2_desc: 'Tienda online completa con catálogo de productos, carrito, flujo de checkout y gestión de inventario. Hecho con Next.js y soporte bilingüe.',
     
     project_3_name: 'NutriVida',
     project_3_type: 'LANDING PAGE',
-    project_3_desc: 'Landing page de alta conversión para nutricionista con integración de reservas online.',
+    project_3_desc: 'Landing page de alta conversión para nutricionista. Diseño limpio con CTA de reservas, sección de testimonios y enfoque mobile-first.',
 
-    project_result: 'Resultado',
-    project_1_result: '+180% generación de leads en el primer mes',
-    project_2_result: '$12K en ventas en los primeros 30 días',
-    project_3_result: '+250% en reservas de turnos',
-    project_cta: 'Ver Caso de Estudio',
+    project_highlight: 'Hecho con',
+    project_1_highlight: 'Next.js · React · Bilingüe · Multi-página',
+    project_2_highlight: 'Next.js · E-commerce · Carrito & Checkout',
+    project_3_highlight: 'Next.js · Landing Page · Mobile-first',
+    project_cta: 'Ver Demo en Vivo',
 
     // About
     about_tag: 'QUIÉNES SOMOS',
     about_title: 'Más que desarrolladores.',
-    about_p1: 'Somos un estudio digital que combina desarrollo, diseño y marketing en un solo servicio. Cuando trabajás con nosotros, no solo recibís un sitio web — recibís un motor de crecimiento.',
+    about_p1: 'Somos un estudio de desarrollo web en Buenos Aires. Combinamos desarrollo, diseño y estrategia de marketing en un solo servicio — para que tengas un sitio web que realmente funcione para tu negocio.',
     about_p2: 'Cada pixel, cada palabra, cada línea de código está creada con un objetivo: hacer crecer tu negocio.',
     about_f1_title: 'Estrategia Primero',
     about_f1_desc: 'Empezamos con tus objetivos de negocio, no con un template.',
     about_f2_title: 'Entrega Completa',
     about_f2_desc: 'Diseño, textos, desarrollo y deploy — todo incluido.',
-    about_f3_title: 'Orientados a Resultados',
-    about_f3_desc: 'Medimos el éxito por tu crecimiento, no solo por entregables.',
+    about_f3_title: 'Tech Moderna',
+    about_f3_desc: 'Hecho con Next.js, React y las últimas herramientas para velocidad y SEO.',
 
     // Contact
     contact_tag: 'INICIÁ TU PROYECTO',
@@ -240,10 +241,11 @@ const translations = {
     contact_send: 'Enviar Mensaje',
     contact_info_title: 'Contacto',
     contact_email_label: 'Email',
+    contact_email_value: 'onward.digital.studio@gmail.com',
     contact_response: 'Tiempo de Respuesta',
     contact_response_value: 'Menos de 24 horas',
     contact_location: 'Ubicación',
-    contact_location_value: 'Remoto — Todo el mundo',
+    contact_location_value: 'Buenos Aires, Argentina',
 
     // Footer
     footer_desc: 'Estudio de desarrollo web que crea sitios que convierten visitantes en clientes.',
@@ -256,7 +258,7 @@ const translations = {
 const LanguageContext = createContext();
 
 export function LanguageProvider({ children }) {
-  const [lang, setLang] = useState('en');
+  const [lang, setLang] = useState('es');
 
   const t = (key) => translations[lang]?.[key] || key;
 
