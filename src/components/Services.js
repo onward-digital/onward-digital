@@ -2,9 +2,14 @@
 
 import { useLanguage } from '@/context/LanguageContext';
 import { Check, ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { fadeInUp, slideInLeft, staggerContainer } from '@/hooks/animations';
 
 export default function Services() {
   const { t } = useLanguage();
+  const { ref: headerRef, isInView: headerInView } = useScrollAnimation();
+  const { ref: cardsRef, isInView: cardsInView } = useScrollAnimation();
 
   const packages = [
     {
@@ -37,8 +42,15 @@ export default function Services() {
     <section id="services" className="section-padding" style={{ background: 'var(--color-bg-secondary)' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
         {/* Header */}
-        <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-          <span
+        <motion.div
+          ref={headerRef}
+          initial="hidden"
+          animate={headerInView ? 'visible' : 'hidden'}
+          variants={staggerContainer}
+          style={{ textAlign: 'center', marginBottom: '4rem' }}
+        >
+          <motion.span
+            variants={fadeInUp}
             style={{
               fontFamily: 'var(--font-mono)',
               fontSize: '0.75rem',
@@ -49,8 +61,9 @@ export default function Services() {
             }}
           >
             {t('services_tag')}
-          </span>
-          <h2
+          </motion.span>
+          <motion.h2
+            variants={fadeInUp}
             style={{
               fontFamily: 'var(--font-display)',
               fontWeight: 800,
@@ -59,8 +72,9 @@ export default function Services() {
             }}
           >
             {t('services_title')}
-          </h2>
-          <p
+          </motion.h2>
+          <motion.p
+            variants={fadeInUp}
             style={{
               fontFamily: 'var(--font-body)',
               fontSize: '1.05rem',
@@ -71,11 +85,15 @@ export default function Services() {
             }}
           >
             {t('services_subtitle')}
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
         {/* Pricing Cards */}
-        <div
+        <motion.div
+          ref={cardsRef}
+          initial="hidden"
+          animate={cardsInView ? 'visible' : 'hidden'}
+          variants={staggerContainer}
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
@@ -84,23 +102,32 @@ export default function Services() {
           }}
         >
           {packages.map((pkg, i) => (
-            <div
+            <motion.div
               key={i}
-              className="card-hover"
+              variants={slideInLeft}
+              custom={i}
+              transition={{ duration: 0.6, ease: 'easeOut', delay: i * 0.1 }}
+              whileHover={{ y: -8 }}
               style={{
-                background: pkg.highlighted ? 'linear-gradient(135deg, rgba(34, 211, 238, 0.05), rgba(129, 140, 248, 0.05))' : 'var(--color-bg-card)',
+                background: pkg.highlighted
+                  ? 'linear-gradient(135deg, rgba(34, 211, 238, 0.05), rgba(129, 140, 248, 0.05))'
+                  : 'var(--color-bg-card)',
                 borderRadius: '12px',
                 padding: '2.5rem 2rem',
                 display: 'flex',
                 flexDirection: 'column',
                 position: 'relative',
                 overflow: 'hidden',
-                border: pkg.highlighted ? '1px solid var(--color-accent)' : undefined,
+                border: pkg.highlighted ? '1px solid var(--color-accent)' : '1px solid var(--color-border)',
+                transition: 'border-color 0.3s ease, box-shadow 0.3s ease',
               }}
+              className="service-card"
             >
               {/* Badge */}
               {pkg.badge && (
-                <div
+                <motion.div
+                  animate={{ scale: [1, 1.06, 1] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
                   style={{
                     position: 'absolute',
                     top: '1.25rem',
@@ -116,7 +143,7 @@ export default function Services() {
                   }}
                 >
                   {pkg.badge}
-                </div>
+                </motion.div>
               )}
 
               {/* Package Name */}
@@ -174,16 +201,18 @@ export default function Services() {
               </div>
 
               {/* CTA */}
-              <a
+              <motion.a
                 href="#contact"
                 className={pkg.highlighted ? 'btn-primary' : 'btn-secondary'}
                 style={{ justifyContent: 'center', width: '100%', textAlign: 'center' }}
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
               >
                 {t('service_cta')} <ArrowRight size={16} />
-              </a>
-            </div>
+              </motion.a>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
