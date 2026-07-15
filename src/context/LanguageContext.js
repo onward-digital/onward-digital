@@ -29,7 +29,9 @@ const translations = {
     services_tag: 'WHAT WE DO',
     services_title: 'Services & Packages',
     services_subtitle: 'Every website we build comes with sales-focused copy, conversion-optimized design, and marketing strategy — not just code.',
-    
+    services_currency: 'USD',
+    services_pricing_note: 'Prices valid for 30 days from quote date. Subject to adjustment based on exchange rate and inflation.',
+
     service_1_name: 'Starter',
     service_1_price: '$500',
     service_1_desc: 'Perfect for professionals who need a strong online presence fast.',
@@ -64,6 +66,27 @@ const translations = {
     service_3_f7: '15-25 day delivery',
 
     service_cta: 'Get Started',
+
+    // Maintenance Plans
+    maintenance_title: 'Maintenance Plans',
+    maintenance_subtitle: 'Your site always updated, secure and running. No surprises.',
+
+    maintenance_1_name: 'Básico',
+    maintenance_1_price: '$35 USD/mo',
+    maintenance_1_f1: 'Managed hosting and domain',
+    maintenance_1_f2: 'Security updates',
+    maintenance_1_f3: 'Automatic backups',
+    maintenance_1_f4: 'Minor content changes',
+    maintenance_1_f5: 'Email support',
+
+    maintenance_2_name: 'Plus',
+    maintenance_2_price: '$60 USD/mo',
+    maintenance_2_badge: 'RECOMMENDED',
+    maintenance_2_f1: 'Everything in Básico',
+    maintenance_2_f2: 'Unlimited content changes',
+    maintenance_2_f3: 'Monthly metrics report',
+    maintenance_2_f4: 'Ongoing performance optimization',
+    maintenance_2_f5: 'Priority WhatsApp support',
 
     // Portfolio
     portfolio_tag: 'OUR WORK',
@@ -154,9 +177,11 @@ const translations = {
     services_tag: 'QUÉ HACEMOS',
     services_title: 'Servicios y Paquetes',
     services_subtitle: 'Cada sitio que construimos incluye textos de venta, diseño optimizado para conversión y estrategia de marketing — no solo código.',
+    services_currency: 'ARS',
+    services_pricing_note: 'Precios válidos por 30 días desde la fecha de cotización. Sujetos a actualización por variación cambiaria e inflación.',
 
     service_1_name: 'Starter',
-    service_1_price: '$500',
+    service_1_price: '$390.000',
     service_1_desc: 'Perfecto para profesionales que necesitan presencia online rápido.',
     service_1_f1: 'Sitio landing de una página',
     service_1_f2: 'Diseño responsive (mobile-first)',
@@ -166,7 +191,7 @@ const translations = {
     service_1_f6: 'Entrega en 5-7 días',
 
     service_2_name: 'Business',
-    service_2_price: '$1.200',
+    service_2_price: '$750.000',
     service_2_desc: 'Para negocios listos para dominar su mercado online.',
     service_2_f1: 'Sitio web multi-página (hasta 5)',
     service_2_f2: 'Diseño UI/UX personalizado',
@@ -178,7 +203,7 @@ const translations = {
     service_2_badge: 'MÁS POPULAR',
 
     service_3_name: 'Premium',
-    service_3_price: '$2.500+',
+    service_3_price: '$1.400.000+',
     service_3_desc: 'Soluciones full-stack para negocios que necesitan funcionalidad avanzada.',
     service_3_f1: 'Todo lo del Business',
     service_3_f2: 'E-commerce / tienda online',
@@ -189,6 +214,27 @@ const translations = {
     service_3_f7: 'Entrega en 15-25 días',
 
     service_cta: 'Empezar',
+
+    // Maintenance Plans
+    maintenance_title: 'Planes de Mantenimiento',
+    maintenance_subtitle: 'Tu sitio siempre actualizado, seguro y funcionando. Sin sorpresas.',
+
+    maintenance_1_name: 'Básico',
+    maintenance_1_price: '$50.000 ARS/mes',
+    maintenance_1_f1: 'Hosting y dominio gestionados',
+    maintenance_1_f2: 'Actualizaciones de seguridad',
+    maintenance_1_f3: 'Backups automáticos',
+    maintenance_1_f4: 'Cambios menores de contenido',
+    maintenance_1_f5: 'Soporte por email',
+
+    maintenance_2_name: 'Plus',
+    maintenance_2_price: '$90.000 ARS/mes',
+    maintenance_2_badge: 'RECOMENDADO',
+    maintenance_2_f1: 'Todo lo del plan Básico',
+    maintenance_2_f2: 'Cambios de contenido ilimitados',
+    maintenance_2_f3: 'Reporte mensual de métricas',
+    maintenance_2_f4: 'Optimización de rendimiento continua',
+    maintenance_2_f5: 'Soporte prioritario por WhatsApp',
 
     // Portfolio
     portfolio_tag: 'NUESTRO TRABAJO',

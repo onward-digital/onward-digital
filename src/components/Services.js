@@ -10,6 +10,7 @@ export default function Services() {
   const { t } = useLanguage();
   const { ref: headerRef, isInView: headerInView } = useScrollAnimation();
   const { ref: cardsRef, isInView: cardsInView } = useScrollAnimation();
+  const { ref: maintenanceRef, isInView: maintenanceInView } = useScrollAnimation();
 
   const packages = [
     {
@@ -35,6 +36,23 @@ export default function Services() {
       features: [t('service_3_f1'), t('service_3_f2'), t('service_3_f3'), t('service_3_f4'), t('service_3_f5'), t('service_3_f6'), t('service_3_f7')],
       badge: null,
       highlighted: false,
+    },
+  ];
+
+  const maintenancePackages = [
+    {
+      name: t('maintenance_1_name'),
+      price: t('maintenance_1_price'),
+      features: [t('maintenance_1_f1'), t('maintenance_1_f2'), t('maintenance_1_f3'), t('maintenance_1_f4'), t('maintenance_1_f5')],
+      badge: null,
+      highlighted: false,
+    },
+    {
+      name: t('maintenance_2_name'),
+      price: t('maintenance_2_price'),
+      features: [t('maintenance_2_f1'), t('maintenance_2_f2'), t('maintenance_2_f3'), t('maintenance_2_f4'), t('maintenance_2_f5')],
+      badge: t('maintenance_2_badge'),
+      highlighted: true,
     },
   ];
 
@@ -171,7 +189,7 @@ export default function Services() {
                   {pkg.price}
                 </span>
                 <span style={{ fontFamily: 'var(--font-body)', fontSize: '0.85rem', color: 'var(--color-text-secondary)', marginLeft: '0.25rem' }}>
-                  USD
+                  {t('services_currency')}
                 </span>
               </div>
 
@@ -209,6 +227,166 @@ export default function Services() {
                 whileTap={{ scale: 0.97 }}
               >
                 {t('service_cta')} <ArrowRight size={16} />
+              </motion.a>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Pricing Note */}
+        <p
+          style={{
+            fontFamily: 'var(--font-body)',
+            fontSize: '0.85rem',
+            color: 'var(--color-text-secondary)',
+            opacity: 0.7,
+            textAlign: 'center',
+            maxWidth: '600px',
+            margin: '2rem auto 0',
+            lineHeight: 1.6,
+          }}
+        >
+          {t('services_pricing_note')}
+        </p>
+
+        {/* Maintenance Plans */}
+        <motion.div
+          ref={maintenanceRef}
+          initial="hidden"
+          animate={maintenanceInView ? 'visible' : 'hidden'}
+          variants={staggerContainer}
+          style={{ textAlign: 'center', marginTop: '5rem', marginBottom: '2.5rem' }}
+        >
+          <motion.h3
+            variants={fadeInUp}
+            style={{
+              fontFamily: 'var(--font-display)',
+              fontWeight: 700,
+              fontSize: 'clamp(1.4rem, 2.5vw, 1.8rem)',
+              marginBottom: '0.75rem',
+            }}
+          >
+            {t('maintenance_title')}
+          </motion.h3>
+          <motion.p
+            variants={fadeInUp}
+            style={{
+              fontFamily: 'var(--font-body)',
+              fontSize: '0.95rem',
+              color: 'var(--color-text-secondary)',
+              maxWidth: '500px',
+              margin: '0 auto',
+              lineHeight: 1.6,
+            }}
+          >
+            {t('maintenance_subtitle')}
+          </motion.p>
+        </motion.div>
+
+        <motion.div
+          initial="hidden"
+          animate={maintenanceInView ? 'visible' : 'hidden'}
+          variants={staggerContainer}
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 340px))',
+            gap: '1.5rem',
+            justifyContent: 'center',
+            maxWidth: '800px',
+            margin: '0 auto',
+          }}
+        >
+          {maintenancePackages.map((pkg, i) => (
+            <motion.div
+              key={i}
+              variants={slideInLeft}
+              custom={i}
+              transition={{ duration: 0.6, ease: 'easeOut', delay: i * 0.1 }}
+              whileHover={{ y: -6 }}
+              style={{
+                background: pkg.highlighted
+                  ? 'linear-gradient(135deg, rgba(34, 211, 238, 0.05), rgba(129, 140, 248, 0.05))'
+                  : 'var(--color-bg-card)',
+                borderRadius: '12px',
+                padding: '1.75rem 1.5rem',
+                display: 'flex',
+                flexDirection: 'column',
+                position: 'relative',
+                overflow: 'hidden',
+                border: pkg.highlighted ? '1px solid var(--color-accent)' : '1px solid var(--color-border)',
+                transition: 'border-color 0.3s ease, box-shadow 0.3s ease',
+              }}
+              className="service-card"
+            >
+              {/* Badge */}
+              {pkg.badge && (
+                <motion.div
+                  animate={{ scale: [1, 1.06, 1] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+                  style={{
+                    position: 'absolute',
+                    top: '1rem',
+                    right: '1rem',
+                    background: 'var(--color-accent)',
+                    color: 'var(--color-bg)',
+                    fontFamily: 'var(--font-mono)',
+                    fontSize: '0.6rem',
+                    fontWeight: 700,
+                    padding: '0.25rem 0.65rem',
+                    borderRadius: '100px',
+                    letterSpacing: '0.05em',
+                  }}
+                >
+                  {pkg.badge}
+                </motion.div>
+              )}
+
+              {/* Package Name */}
+              <h4
+                style={{
+                  fontFamily: 'var(--font-display)',
+                  fontWeight: 700,
+                  fontSize: '1.05rem',
+                  marginBottom: '0.4rem',
+                }}
+              >
+                {pkg.name}
+              </h4>
+
+              {/* Price */}
+              <div style={{ marginBottom: '1rem' }}>
+                <span
+                  style={{
+                    fontFamily: 'var(--font-display)',
+                    fontWeight: 800,
+                    fontSize: '1.6rem',
+                    color: pkg.highlighted ? 'var(--color-accent)' : 'var(--color-text)',
+                  }}
+                >
+                  {pkg.price}
+                </span>
+              </div>
+
+              {/* Features */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', marginBottom: '1.5rem', flex: 1 }}>
+                {pkg.features.map((feature, j) => (
+                  <div key={j} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.6rem' }}>
+                    <Check size={14} style={{ color: 'var(--color-accent)', marginTop: '2px', flexShrink: 0 }} />
+                    <span style={{ fontFamily: 'var(--font-body)', fontSize: '0.85rem', color: 'var(--color-text-secondary)' }}>
+                      {feature}
+                    </span>
+                  </div>
+                ))}
+              </div>
+
+              {/* CTA */}
+              <motion.a
+                href="#contact"
+                className={pkg.highlighted ? 'btn-primary' : 'btn-secondary'}
+                style={{ justifyContent: 'center', width: '100%', textAlign: 'center' }}
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+              >
+                {t('service_cta')} <ArrowRight size={14} />
               </motion.a>
             </motion.div>
           ))}
