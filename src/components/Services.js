@@ -30,6 +30,15 @@ export default function Services() {
       highlighted: true,
     },
     {
+      name: t('service_4_name'),
+      price: t('service_4_price'),
+      desc: t('service_4_desc'),
+      features: [t('service_4_f1'), t('service_4_f2'), t('service_4_f3'), t('service_4_f4'), t('service_4_f5'), t('service_4_f6'), t('service_4_f7')],
+      badge: t('service_4_badge'),
+      highlighted: false,
+      note: t('service_4_note'),
+    },
+    {
       name: t('service_3_name'),
       price: t('service_3_price'),
       desc: t('service_3_desc'),
@@ -112,12 +121,8 @@ export default function Services() {
           initial="hidden"
           animate={cardsInView ? 'visible' : 'hidden'}
           variants={staggerContainer}
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-            gap: '1.5rem',
-            alignItems: 'stretch',
-          }}
+          className="services-grid"
+          style={{ alignItems: 'stretch' }}
         >
           {packages.map((pkg, i) => (
             <motion.div
@@ -179,10 +184,10 @@ export default function Services() {
               {/* Price */}
               <div style={{ marginBottom: '1rem' }}>
                 <span
+                  className="service-price-value"
                   style={{
                     fontFamily: 'var(--font-display)',
                     fontWeight: 800,
-                    fontSize: '2.5rem',
                     color: pkg.highlighted ? 'var(--color-accent)' : 'var(--color-text)',
                   }}
                 >
@@ -207,7 +212,7 @@ export default function Services() {
               </p>
 
               {/* Features */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '2rem', flex: 1 }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: pkg.note ? '1rem' : '2rem', flex: 1 }}>
                 {pkg.features.map((feature, j) => (
                   <div key={j} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
                     <Check size={16} style={{ color: 'var(--color-accent)', marginTop: '2px', flexShrink: 0 }} />
@@ -217,6 +222,22 @@ export default function Services() {
                   </div>
                 ))}
               </div>
+
+              {/* Note */}
+              {pkg.note && (
+                <p
+                  style={{
+                    fontFamily: 'var(--font-body)',
+                    fontSize: '0.75rem',
+                    color: 'var(--color-text-secondary)',
+                    opacity: 0.65,
+                    lineHeight: 1.5,
+                    marginBottom: '2rem',
+                  }}
+                >
+                  {pkg.note}
+                </p>
+              )}
 
               {/* CTA */}
               <motion.a

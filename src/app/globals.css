@@ -285,3 +285,33 @@ body {
   border-color: var(--color-accent) !important;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(34, 211, 238, 0.1);
 }
+
+/* Services pricing grid — 1 / 2x2 / 4 columns */
+.services-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Service card price — shrinks a step at the 4-column breakpoint */
+.service-price-value {
+  font-size: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+  .service-price-value {
+    font-size: 2rem;
+  }
+}
