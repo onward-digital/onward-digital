@@ -1,5 +1,6 @@
 import './globals.css';
 import { LanguageProvider } from '@/context/LanguageContext';
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata = {
   title: 'Onward Digital — Websites That Sell',
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
         <LanguageProvider>
           {children}
         </LanguageProvider>
+        <Analytics />
       </body>
     </html>
   );
