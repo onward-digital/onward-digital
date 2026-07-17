@@ -169,6 +169,10 @@ const translations = {
     footer_nav: 'Navigation',
     footer_connect: 'Connect',
     footer_rights: 'All rights reserved.',
+
+    // WhatsApp
+    whatsapp_aria: 'Contact via WhatsApp',
+    whatsapp_message: "Hi! I saw your site and I'd like to talk about a web project.",
   },
   es: {
     // Nav
@@ -336,6 +340,10 @@ const translations = {
     footer_nav: 'Navegación',
     footer_connect: 'Conectar',
     footer_rights: 'Todos los derechos reservados.',
+
+    // WhatsApp
+    whatsapp_aria: 'Contactar por WhatsApp',
+    whatsapp_message: 'Hola! Vi su sitio y me interesa hablar sobre un proyecto web.',
   },
 };
 

@@ -11,6 +11,7 @@ import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import LoadingScreen from '@/components/LoadingScreen';
 import CustomCursor from '@/components/CustomCursor';
+import WhatsAppButton from '@/components/WhatsAppButton';
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -23,6 +24,7 @@ export default function Home() {
   return (
     <>
       <CustomCursor />
+      <WhatsAppButton />
       <AnimatePresence>
         {loading && <LoadingScreen key="loader" />}
       </AnimatePresence>
